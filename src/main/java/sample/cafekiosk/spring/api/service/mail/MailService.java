@@ -6,8 +6,8 @@ import sample.cafekiosk.spring.client.mail.MailSendClient;
 import sample.cafekiosk.spring.domain.history.mail.MailSendHistory;
 import sample.cafekiosk.spring.domain.history.mail.MailSendHistoryRepository;
 
-@Service
 @RequiredArgsConstructor
+@Service
 public class MailService {
 
     private final MailSendClient mailSendClient;
@@ -23,9 +23,15 @@ public class MailService {
                     .content(content)
                     .build()
             );
+
+            mailSendClient.a();
+            mailSendClient.b();
+            mailSendClient.c();
+
             return true;
         }
 
         return false;
     }
+
 }

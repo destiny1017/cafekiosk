@@ -8,6 +8,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
+import sample.cafekiosk.spring.IntegrationTestSupport;
 import sample.cafekiosk.spring.client.mail.MailSendClient;
 import sample.cafekiosk.spring.domain.history.mail.MailSendHistory;
 import sample.cafekiosk.spring.domain.history.mail.MailSendHistoryRepository;
@@ -35,15 +36,15 @@ class MailServiceTest {
     @Test
     void sendMail() {
         // given
-//        when(mailSendClient.sendEmail(anyString(), anyString(), anyString(), anyString()))
-//            .thenReturn(true);
+        when(mailSendClient.sendEmail(anyString(), anyString(), anyString(), anyString()))
+            .thenReturn(true);
         // spy
 //        doReturn(true)
 //                .when(mailSendClient)
 //                .sendEmail(anyString(), anyString(), anyString(), anyString());
         // bdd
-        given(mailSendClient.sendEmail(anyString(), anyString(), anyString(), anyString()))
-                .willReturn(true);
+//        given(mailSendClient.sendEmail(anyString(), anyString(), anyString(), anyString()))
+//                .willReturn(true);
 
 
         // when
